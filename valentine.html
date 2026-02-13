@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Kenangan Cinta - Hadiah Valentine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #FFF8DC, #FFB6C1);
+            color: #8B0000;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .intro {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeIn 2s ease-in;
+        }
+        .section {
+            margin: 50px 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .heart {
+            width: 50px;
+            height: 50px;
+            fill: #8B0000;
+            animation: pulse 2s infinite;
+        }
+        .surprise {
+            display: none;
+            background: #FFB6C1;
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 50px;
+        }
+        .surprise.show {
+            display: block;
+            animation: slideUp 1s ease;
+        }
+        button {
+            background: #8B0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #A52A2A;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            <svg class="heart" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <h1>Ada Sesuatu yang Tersembunyi di Sini, Hanya Untukmu</h1>
+            <p>Klik untuk memulai perjalanan cinta kita. Siapkah membuka kotak hadiah perasaan satu per satu?</p>
+            <button onclick="startJourney()">Mulai</button>
+        </div>
+
+        <div class="section" id="story">
+            <h2>Cerita Cinta Kita</h2>
+            <p>Dari pertama kali ketemu di kafe itu, kamu yang pesen kopi pahit sambil ketawa karena aku salah pesen. Sekarang, setelah bertahun-tahun, kita udah lewatin badai dan pelangi bareng. Kamu selalu bikin hari aku lebih cerah, meski kadang aku lupa bawa payung hujan.</p>
+            <p>Ingat waktu kita jalan-jalan di pantai, kamu jatuh ke pasir basah? Aku masih ketawa tiap ingat itu. Tapi yang paling aku suka, cara kamu pegang tanganku pas aku lagi down. Kamu itu seperti rumah, tempat aku pulang.</p>
+        </div>
+
+        <div class="section" id="moments">
+            <h2>Momen Sederhana yang Bermakna</h2>
+            <ul style="text-align: left; display: inline-block;">
+                <li>Kamu masak sarapan pagi pas aku bangun telat kerja. Rasanya kayak surga, meski kadang gosong.</li>
+                <li>Waktu kita nonton film horror, kamu pegang tanganku erat-erat. Ternyata kamu takut juga ya?</li>
+                <li>Pesan singkatmu tiap pagi: "Selamat pagi, sayang. Jangan lupa makan." Hal kecil yang bikin aku tersenyum seharian.</li>
+            </ul>
+        </div>
+
+        <div class="section" id="notes">
+            <h2>Catatan Kecil Tentang Dirimu</h2>
+            <p>Aku suka cara kamu ketawa lepas pas denger joke bodohku. Dan mata kamu yang berkilauan pas bahagia. Kamu juga suka nyanyi lagu lama sambil masak, itu bikin rumah kita lebih hidup. Oh ya, aku diam-diam suka aroma parfum kamu yang selalu bikin aku tenang.</p>
+        </div>
+
+        <div class="surprise" id="surprise">
+            <h2>Surprise! Pesan Dari Hati</h2>
+            <p>Terima kasih ya, karena udah jadi bagian hidupku. Kamu bikin aku percaya kalau cinta itu nyata. Ke depan, aku mau terus jalanin ini bareng kamu, lewatin apa aja. Aku cinta kamu, lebih dari kata-kata bisa ungkapin. Happy Valentine, sayang. Ini hadiah yang nggak bisa dibungkus, tapi bisa dikenang selamanya.</p>
+            <svg class="heart" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+    </div>
+
+    <script>
+        function startJourney() {
+            document.querySelector('.intro').style.display = 'none';
+            revealSections();
+        }
+
+        function revealSections() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.classList.add('visible');
+                }, index * 1000);
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const surprise = document.getElementById('surprise');
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+                surprise.classList.add('show');
+            }
+        });
+    </script>
+</body>
+</html>
